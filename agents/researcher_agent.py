@@ -10,5 +10,5 @@ def create_researcher(llm):
         backstory="Expert travel analyst using web search for real-time info.",
         tools=[serper_search],
         llm=llm,
-        verbose=True,
+        verbose=False,
     )

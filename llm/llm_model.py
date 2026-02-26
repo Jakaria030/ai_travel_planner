@@ -5,9 +5,9 @@ from crewai import LLM
 load_dotenv()
 
 # Read configuration from environment
-MODEL = os.getenv("GEMINI_MODEL", "gemini/gemini-2.0-flash")
-API_KEY = os.getenv("GEMINI_API_KEY")
-TEMPERATURE = float(os.getenv("GEMINI_TEMPERATURE", 0.7))
+MODEL = os.getenv("MODEL")
+API_KEY = os.getenv("API_KEY")
+TEMPERATURE = float(os.getenv("TEMPERATURE"))
 
 def get_llm():
     return LLM(

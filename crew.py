@@ -1,5 +1,5 @@
 from crewai import Crew
-from llm.gemini_client import get_llm
+from llm.llm_model import get_llm
 from agents.researcher_agent import create_researcher
 from tasks.researcher_task import research_task
 
@@ -14,5 +14,5 @@ def create_crew(data):
     return Crew(
         agents=[researcher],
         tasks=tasks,
-        verbose=True
+        verbose=False
     )

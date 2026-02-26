@@ -12,5 +12,7 @@ def research_task(agent, destination, preferences=None):
         Please provide the output in **Markdown format**. Use headings, bullet points, and formatting appropriately for Markdown.
         """,
         agent=agent,
-        expected_output="str"
+        expected_output="str",
+        markdown=True,
+        output_file="output/destination_researcher.md"
     )
