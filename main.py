@@ -1,5 +1,7 @@
 import argparse
 from utils.logger import logger
+from crew import create_crew
+
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Multi-Agent AI Travel Planner")
@@ -49,6 +51,11 @@ def main():
             if arguments.preferences else []
         )
     }
+
+    crew = create_crew(user_input)
+    result = crew.kickoff()
+
+    print(result)
 
     logger.info("AI Travel Planner Execution Completed.")
 
