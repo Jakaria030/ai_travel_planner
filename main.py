@@ -1,5 +1,5 @@
 import argparse
-
+from utils.logger import logger
 
 def parse_arguments():
     parser = argparse.ArgumentParser(description="Multi-Agent AI Travel Planner")
@@ -37,7 +37,7 @@ def parse_arguments():
 
 
 def main():
-    print("Hello from ai-travel-planner!")
+    logger.info("Starting AI Travel Planner...")
 
     arguments = parse_arguments()
     user_input = {
@@ -50,8 +50,7 @@ def main():
         )
     }
 
-
-    print(user_input)
+    logger.info("AI Travel Planner Execution Completed.")
 
 
 if __name__ == "__main__":
