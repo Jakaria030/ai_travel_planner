@@ -52,10 +52,20 @@ def main():
         )
     }
 
-    crew = create_crew(user_input)
-    result = crew.kickoff()
+    create_crew(user_input).kickoff()
 
-    print(result)
+    # Read all task
+    with open("output/destination_researcher.md") as f:
+        print(f.read())
+
+    with open("output/budget_planner.md") as f:
+        print(f.read())
+
+    with open("output/itinerary_designer.md") as f:
+        print(f.read())
+
+    with open("output/validation.md") as f:
+        print(f.read())
 
     logger.info("AI Travel Planner Execution Completed.")
 

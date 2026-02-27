@@ -20,8 +20,8 @@ def create_crew(data):
     tasks = [
         research_task(researcher, data["destination"], data["preferences"]),
         budget_task(budget_planner, data["budget"]),
-        itinerary_task(itinerary_designer, data["travel_dates"]),
-        validation_task(validation)
+        itinerary_task(itinerary_designer, data["travel_dates"], data["preferences"]),
+        validation_task(validation, data["budget"], data["travel_dates"])
     ]
 
     return Crew(
